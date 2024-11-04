@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+    
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.body__parts {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.body__head {
+    background-color: rgb(255, 255, 255);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 99rem;
+}
+
+.body__glasses {
+    position: absolute;
+    font-size: 5rem;
+    z-index: 1;
+    top: -2rem;
+}
+
+.body__mouth {
+    position: absolute;
+    width: 2rem;
+    height: 1rem;
+    background-color: black;
+    border-radius: 1rem;
+    top: 3.5rem;
+    overflow: hidden;
+  }
+  
+  .body__mouth::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(255, 255, 255); /* Anta att bakgrunden är vit */
+    border-radius: 100%;
+    top: -1.5rem;
+    left: 0;
+    transform: rotate(45deg); /* Justera för att få rätt kurva */
+  }
+
+.body__chest {
+    position: relative;
+    background-color: rgb(0, 53, 7);
+    width: 9rem;
+    height: 11rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    flex-direction: row;
+}
+
+.body__arm__left {
+    position: absolute;
+    top: 2.5rem;
+    right: 6rem;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 99rem;
+    background-color: rgb(40, 226, 56);
+    transform: rotate(-60deg);
+   
+}
+
+.body__arm__right {
+    position: absolute;
+    top: 2.5rem;
+    left: 6rem;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 99rem;
+    background-color: rgb(40, 226, 56);
+    transform: rotate(60deg);
+   
+}
+
+.body__leg__left {
+    position: absolute;
+    width: 7rem;
+    height: 2rem;
+    right: 5rem;
+    top: 12rem;
+    border-radius: 99rem;
+    background-color: rgb(40, 226, 56);
+    transform: rotate(-75deg);
+    z-index: -1;
+}
+
+.body__leg__right {
+    position: absolute;
+    width: 7rem;
+    height: 2rem;
+    left: 5rem;
+    top: 12rem;
+    border-radius: 99rem;
+    background-color: rgb(40, 226, 56);
+    transform: rotate(75deg);
+    z-index: -1;
+}
+
+#display {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 0rem;
+    gap: 1rem;
+    height: 2rem;
+}
+
+.buttons__feed {
+    width: 6rem;
+    background-color: rgb(235, 53, 53);
+    font-size: 100%;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 99rem;
+}
+
+.buttons__play {
+    width: 6rem;
+    background-color: rgb(133, 108, 223);
+    font-size: 100%;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 99rem;
+}
+
+.buttons__sleep {
+    width: 6rem;
+    background-color: rgb(58, 106, 238);
+    font-size: 100%;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 99rem;
+}
+
+.buttons__adventure {
+    width: 6rem;
+    background-color: rgb(0, 66, 14);
+    font-size: 100%;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 99rem;
+}
