@@ -9,6 +9,9 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
 }
     
 
@@ -27,8 +30,20 @@ body {
     padding: 0;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 10rem;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
 
+.body__parts--adventure {
+    left: 10rem;
+}
+
+.body__parts--return {
+    left: 0;
 }
 
 .body__head {
@@ -42,30 +57,41 @@ body {
     position: absolute;
     font-size: 5rem;
     z-index: 1;
-    top: -2rem;
+    top: -2.3rem;
+    display: block;
 }
 
-.body__mouth {
+.body__face--happy {
     position: absolute;
-    width: 2rem;
-    height: 1rem;
-    background-color: black;
-    border-radius: 1rem;
-    top: 3.5rem;
-    overflow: hidden;
-  }
-  
-  .body__mouth::before {
-    content: "";
+    font-size: 5rem;
+    z-index: 0;
+    top: -1rem;
+    display: block;
+}
+
+.body__face--neutral {
     position: absolute;
-    width: 2rem;
-    height: 2rem;
-    background-color: rgb(255, 255, 255); /* Anta att bakgrunden är vit */
-    border-radius: 100%;
-    top: -1.5rem;
-    left: 0;
-    transform: rotate(45deg); /* Justera för att få rätt kurva */
-  }
+    font-size: 5rem;
+    z-index: 0;
+    top: -1rem;
+    display: none;
+}
+
+.body__face--sad {
+    position: absolute;
+    font-size: 5rem;
+    z-index: 0;
+    top: -1rem;
+    display: none;
+}
+
+.body__face--dead {
+    position: absolute;
+    font-size: 5.5rem;
+    z-index: 1;
+    top: -1rem;
+    display: none;
+}
 
 .body__chest {
     position: relative;
@@ -86,7 +112,6 @@ body {
     border-radius: 99rem;
     background-color: rgb(40, 226, 56);
     transform: rotate(-60deg);
-   
 }
 
 .body__arm__right {
@@ -98,7 +123,6 @@ body {
     border-radius: 99rem;
     background-color: rgb(40, 226, 56);
     transform: rotate(60deg);
-   
 }
 
 .body__leg__left {
@@ -133,14 +157,21 @@ body {
     margin-top: 10rem;
     margin-bottom: 0;
     font-size: 1.5rem;
+    position: absolute;
+    left: 52rem;
+    top: -3rem
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin: 0rem;
     gap: 1rem;
     height: 2rem;
+    position: absolute;
+    left: 46rem;
+    top: 50rem;
 }
 
 .buttons__feed {
