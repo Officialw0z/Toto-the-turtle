@@ -5,64 +5,48 @@
 }
 
 body {
-    background-color: rgb(128, 128, 128);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.801);
-    display: none; 
-    z-index: 10; 
-}
-
-.gameover {
-    position: absolute;
-    display: none;
-    width: 30rem;
-    height: 20rem;
-    background-color: rgb(247, 135, 43);
-    align-self: center;
     justify-content: center;
-    top: 65%;
-    text-align: center;
-    font-size: 4.5rem;
-    border-radius: 10%;
-    z-index: 11;
-}
-
-.gameover__restart {
-    position: absolute;
-    display: block;
-    width: 25%;
-    height: 15%;
-    top: 80%;
     align-items: center;
-    border-style: none;
-    cursor: pointer;
-    border-radius: 99rem;
-    justify-content: center;
-    text-align: center;
-    background-color: rgb(247, 41, 41);
-    color: whitesmoke;
-    left: 35%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.header {
+h1 {
     display: flex;
     justify-content: center;
-    font-size: 5rem;
-    font-style: italic;
+    font-size: 10rem;
     color: whitesmoke;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+    margin: 2%;
+    color: whitesmoke;
+}
+
+.button {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }
 
 .body__parts {
@@ -75,7 +59,7 @@ body {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 10rem;
+    top: 25rem;
     left: 0;
     transition: left 0.5s ease-in-out;
 }
@@ -197,65 +181,4 @@ body {
     background-color: rgb(40, 226, 56);
     transform: rotate(75deg);
     z-index: -1;
-}
-
-#display {
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
-    margin-bottom: 0;
-    font-size: 1.5rem;
-    position: absolute;
-    left: 54rem;
-    top: -3rem
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0rem;
-    gap: 1rem;
-    height: 2rem;
-    position: absolute;
-    left: 46rem;
-    top: 50rem;
-}
-
-.buttons__feed {
-    width: 6rem;
-    background-color: rgb(9, 135, 53);
-    font-size: 100%;
-    color: whitesmoke;
-    cursor: pointer;
-    border-radius: 99rem;
-}
-
-.buttons__play {
-    width: 6rem;
-    background-color: rgb(133, 108, 223);
-    font-size: 100%;
-    color: whitesmoke;
-    cursor: pointer;
-    border-radius: 99rem;
-}
-
-.buttons__sleep {
-    width: 6rem;
-    background-color: rgb(136, 148, 46);
-    font-size: 100%;
-    color: whitesmoke;
-    cursor: pointer;
-    border-radius: 99rem;
-}
-
-.buttons__adventure {
-    width: 6rem;
-    background-color: rgb(178, 106, 54);
-    font-size: 100%;
-    color: whitesmoke;
-    cursor: pointer;
-    border-radius: 99rem;
 }
